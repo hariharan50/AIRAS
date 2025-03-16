@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "land_blockchain"
+version = "0.1.0"
+authors = [
+    { name = "Your Name" }
+]
+description = "Research Paper Analysis Tool"
+dependencies = [
+    "streamlit",
+    "streamlit-option-menu",
+    "google-generativeai",
+    "openai",
+    "arxiv",
+    "pandas",
+    "numpy",
+    "plotly",
+    "PyPDF2"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src", "config", "components", "services", "utils"]
